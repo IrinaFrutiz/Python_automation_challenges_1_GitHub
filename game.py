@@ -9,9 +9,7 @@ guessed_words = []  # список уже названных слов
 
 
 def get_word():
-    # print("генератор слова")
     word = random.choice(word_list)
-    # print(word)
     return word
 
 
@@ -146,8 +144,8 @@ def if_guessed(word, word_completion, attempts, guessed):
 
 
 def if_again():
-    again = int(input("Хочешь сыграть ещё разок? Да - нажми не 0, Нет - нажми 0  "))
-    if again:
+    again = input("Хочешь сыграть ещё разок? Да - нажми не 0, Нет - нажми 0  ")
+    if again != '0':
         game_body()
     else:
         print("Увидимся позже!")
